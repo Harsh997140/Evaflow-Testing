@@ -47,34 +47,34 @@ function Icon({ name, size = 24 }: { name: IconName; size?: number }) {
 
 const services = [
   {
-    icon: "drop" as IconName,
+    icon: "bottle" as IconName,
     number: "01",
-    title: "Water & hydration",
-    text: "Water dispensers, bottled water and refreshing soft drinks, delivered and maintained.",
+    title: "Corporate Catering",
+    text: "Office breakfasts, meeting lunches, coffee breaks, finger food, pizza catering and refreshments tailored to your event.",
   },
   {
     icon: "coffee" as IconName,
     number: "02",
-    title: "Coffee moments",
-    text: "Complete coffee and tea setups that make every break feel considered.",
+    title: "Corporate Events & Celebrations",
+    text: "Food and beverage arrangements for office parties, employee celebrations, seasonal events and company milestones.",
   },
   {
     icon: "fruit" as IconName,
     number: "03",
-    title: "Fresh at work",
-    text: "Seasonal fruit and nourishing snacks curated for happy, energised teams.",
+    title: "Event Planning & Decoration",
+    text: "Themed decorations, dessert tables, event styling and setup coordination to bring your ideas to life.",
   },
   {
     icon: "package" as IconName,
     number: "04",
-    title: "Everyday essentials",
-    text: "Sustainable disposables and workplace supplies, always there when needed.",
+    title: "Workplace Refreshments & Supplies",
+    text: "Regular workplace refreshments, beverages, snacks and agreed supply and delivery services.",
   },
   {
     icon: "delivery" as IconName,
     number: "05",
-    title: "Food & catering",
-    text: "From daily lunches to memorable meetings, delivered with care and precision.",
+    title: "Dietary Options",
+    text: "Vegetarian, vegan, gluten-free and lactose-free options available on request, subject to menu and supplier availability",
   },
   {
     icon: "support" as IconName,
@@ -116,7 +116,7 @@ function SiteHeader() {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const message = [
-      "Hello EvaFlow, I'd like to request a quote.",
+      "Hello eväflow, I'd like to request a quote.",
       "",
       `Name: ${form.get("name")}`,
       `Contact number: ${form.get("contact")}`,
@@ -136,7 +136,8 @@ function SiteHeader() {
     <>
       <header className="site-header">
         <a className="brand" href="/#top" aria-label="EvaFlow home">
-          <img src="/assets/evaflow-logo.png" alt="" />
+          <img src="/assets/evaflow-logo.png" alt="eväflow" />
+          <span style={{ fontWeight: "bold", fontFamily: "'DM Sans', sans-serif", fontSize: "2rem", color: "#153b63", paddingLeft: "1rem" }}>eväflow</span>
         </a>
         <nav className={menuOpen ? "main-nav open" : "main-nav"} aria-label="Main navigation">
           <a href="/#services" onClick={closeMenu}>Services</a>
@@ -145,7 +146,7 @@ function SiteHeader() {
           <a href="/menus" onClick={closeMenu}>Menus</a>
           <a href="/gallery" onClick={closeMenu}>Gallery</a>
           <a href="/#locations" onClick={closeMenu}>Locations</a>
-          <a href="/#approach" onClick={closeMenu}>Why EvaFlow</a>
+          <a href="/#approach" onClick={closeMenu}>Why eväflow</a>
           <button className="nav-cta" onClick={openQuoteForm} type="button">
             Request a quote <Icon name="arrow" size={18} />
           </button>
@@ -224,7 +225,7 @@ function SiteFooter() {
     <footer>
       <div className="footer-brand">
         <a className="brand brand-light" href="/#top" aria-label="EvaFlow home">
-          <img src="/assets/evaflow-logo.png" alt="" />
+          <img src="/assets/evaflow-logo.png" alt="eväflow" />
         </a>
         <p>Workplace essentials for happier, healthier and more productive teams.</p>
       </div>
@@ -235,7 +236,7 @@ function SiteFooter() {
         <a href="/#catering">Catering</a>
         <a href="/menus">Menus</a>
         <a href="/gallery">Gallery</a>
-        <a href="/#approach">Why EvaFlow</a>
+        <a href="/#approach">Why eväflow</a>
         <a href="/#locations">Locations</a>
       </div>
       <div>
@@ -247,7 +248,7 @@ function SiteFooter() {
         <a href="/#contact">LinkedIn</a>
         <a href="/#contact">Instagram</a>
       </div>
-      <p className="copyright">© 2025 EvaFlow Services. All rights reserved.</p>
+      <p className="copyright">© 2025 eväflow Services. All rights reserved.</p>
     </footer>
   );
 }
@@ -258,12 +259,12 @@ function AboutPage() {
       <SiteHeader />
       <main className="inner-page" id="top">
         <div className="page-intro">
-          <p className="eyebrow">The story behind EvaFlow</p>
+          <p className="eyebrow">The story behind eväflow</p>
           <h1>Service shaped by<br /><em>experience.</em></h1>
         </div>
         <section className="about-section">
           <div className="founder-portrait">
-            <img src="/assets/founder.jpeg" alt="EvaFlow founder in a professional kitchen" />
+            <img src="/assets/founder.jpeg" alt="eväflow founder in a professional kitchen" />
             <div className="founder-caption">
               <span>Founder-led service</span>
               <strong>Personal care, every day.</strong>
@@ -273,7 +274,7 @@ function AboutPage() {
             <p className="eyebrow">Meet the founder</p>
             <h2>International expertise, delivered with <em>Finnish precision.</em></h2>
             <p className="about-lead">
-              EvaFlow is built on first-hand hospitality experience, cultural
+              eväflow is built on first-hand hospitality experience, cultural
               understanding and direct, personal leadership. Every client works
               with a decision-maker who understands both the details and the
               bigger picture.
@@ -337,27 +338,47 @@ function MenusPage() {
 function GalleryPage() {
   const galleryItems = [
     {
-      image: "catering.jpg",
+      image: "five.png",
       alt: "A catered spread prepared for a workplace gathering",
       caption: "Office catering",
     },
     {
-      image: "community.jpg",
+      image: "culture.jpeg",
       alt: "Community volunteers working together outdoors",
       caption: "Community events",
     },
     {
-      image: "coffee-space.jpg",
+      image: "stall.jpeg",
       alt: "A welcoming workplace coffee area",
       caption: "Everyday moments",
     },
     {
-      image: "menus.jpg",
+      image: "brand.jpeg",
       alt: "Fresh sandwiches and pastries for a team event",
       caption: "Food for every occasion",
     },
     {
-      image: "hero-office.jpg",
+      image: "three.png",
+      alt: "A bright, modern workplace kitchen",
+      caption: "The workplace",
+    },
+    {
+      image: "one.png",
+      alt: "A welcoming workplace coffee area",
+      caption: "Everyday moments",
+    },
+    {
+      image: "two.png",
+      alt: "Fresh sandwiches and pastries for a team event",
+      caption: "Food for every occasion",
+    },
+    {
+      image: "four.png",
+      alt: "A bright, modern workplace kitchen",
+      caption: "The workplace",
+    },
+    {
+      image: "six.png",
       alt: "A bright, modern workplace kitchen",
       caption: "The workplace",
     },
@@ -404,10 +425,10 @@ export default function App() {
         <section className="hero">
           <div className="hero-copy">
             <p className="eyebrow">Workplace essentials, effortlessly managed</p>
-            <h1>Everything your workplace needs to <em>flow.</em></h1>
+            <h2>Corporate Catering & Event Management Made <em>Easy.</em></h2>
             <p className="hero-intro">
-              From fresh water and great coffee to catering and daily supplies,
-              we make busy workplaces feel cared for.
+              From office breakfasts and meeting refreshments to themed corporate events and event styling, 
+              Eväflow Services brings everything together.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#services">
@@ -415,29 +436,29 @@ export default function App() {
               </a>
               <a className="text-link" href="#contact">Talk to our team</a>
             </div>
-            <div className="hero-proof">
+            {/* <div className="hero-proof">
               <div className="avatar-stack" aria-hidden="true">
                 <span>ES</span><span>ML</span><span>AK</span>
               </div>
               <p><strong>Trusted across Finland</strong><br />by teams big and small</p>
-            </div>
+            </div> */}
           </div>
           <div className="hero-visual">
             <img src="/assets/brand.jpeg" alt="A bright, modern workplace kitchen" />
-            <div className="floating-card">
+            {/*<div className="floating-card">
               <span className="float-icon"><Icon name="spark" size={20} /></span>
               <div><strong>One less thing to worry about.</strong><small>We keep your workplace stocked.</small></div>
             </div>
-            <div className="hero-badge"><strong>10+</strong><span>years of<br />reliable service</span></div>
+            <div className="hero-badge"><strong>10+</strong><span>years of<br />reliable service</span></div>*/}
           </div>
         </section>
 
-        <section className="client-strip" aria-label="Our promise">
+        {/*<section className="client-strip" aria-label="Our promise">
           <p>Refreshment</p><span />
           <p>Workplace supplies</p><span />
           <p>Reliable delivery</p><span />
           <p>Human service</p>
-        </section>
+        </section>*/}
 
         <section className="section services-section" id="services">
           <div className="section-heading">
@@ -459,9 +480,9 @@ export default function App() {
                 </div>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
-                <a href="#contact" aria-label={`Ask about ${service.title}`}>
+                {/*<a href="#contact" aria-label={`Ask about ${service.title}`}>
                   Learn more <Icon name="arrow" size={17} />
-                </a>
+                </a>*/}
               </article>
             ))}
           </div>
@@ -469,7 +490,7 @@ export default function App() {
 
         <section className="catering-section" id="catering">
           <div className="catering-heading">
-            <p className="eyebrow">EvaFlow catering</p>
+            <p className="eyebrow">eväflow catering</p>
             <h2>Food that works<br />for <em>every workday.</em></h2>
             <p>
               Fresh, flexible catering for meetings, team moments and everyday
@@ -483,11 +504,11 @@ export default function App() {
           <div className="catering-visual">
             <img src="/assets/catering.jpg" alt="A generous table of fresh catering dishes" />
           </div>
-          <div className="catering-options">
+          {/*<div className="catering-options">
             <article><span>01</span><h3>Office lunches</h3><p>Balanced buffet and individually packed options for everyday teams.</p></article>
             <article><span>02</span><h3>Meetings &amp; events</h3><p>Breakfasts, coffee breaks, finger food and polished event menus.</p></article>
             <article><span>03</span><h3>Dietary care</h3><p>Clear labelling and thoughtful gluten-free, lactose-free and vegan choices.</p></article>
-          </div>
+          </div>*/}
         </section>
 
         <section className="locations-section" id="locations">
@@ -528,7 +549,7 @@ export default function App() {
 
         <section className="section benefits-section" id="approach">
           <div className="benefit-heading">
-            <p className="eyebrow">Why EvaFlow</p>
+            <p className="eyebrow">Why eväflow</p>
             <h2>Simple for you.<br /><em>Better for everyone.</em></h2>
           </div>
           <div className="benefit-grid">
@@ -562,11 +583,11 @@ export default function App() {
         <section className="quote-section">
           <div>
             <p className="eyebrow">Made for modern teams</p>
-            <blockquote>“EvaFlow makes the everyday things feel completely effortless.”</blockquote>
+            <blockquote>“eväflow makes the everyday things feel completely effortless.”</blockquote>
           </div>
           <div className="quote-person">
-            <span>NS</span>
-            <p><strong>Niina Salonen</strong><br />Office Manager, Helsinki</p>
+            <span>PD</span>
+            <p><strong>Pooja Dubey</strong><br />Founder, Helsinki</p>
           </div>
         </section>
 
