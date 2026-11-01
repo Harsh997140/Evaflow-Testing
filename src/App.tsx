@@ -143,6 +143,7 @@ function SiteHeader() {
           <a href="/about" onClick={closeMenu}>About us</a>
           <a href="/#catering" onClick={closeMenu}>Catering</a>
           <a href="/menus" onClick={closeMenu}>Menus</a>
+          <a href="/gallery" onClick={closeMenu}>Gallery</a>
           <a href="/#locations" onClick={closeMenu}>Locations</a>
           <a href="/#approach" onClick={closeMenu}>Why EvaFlow</a>
           <button className="nav-cta" onClick={openQuoteForm} type="button">
@@ -233,6 +234,7 @@ function SiteFooter() {
         <a href="/about">About us</a>
         <a href="/#catering">Catering</a>
         <a href="/menus">Menus</a>
+        <a href="/gallery">Gallery</a>
         <a href="/#approach">Why EvaFlow</a>
         <a href="/#locations">Locations</a>
       </div>
@@ -332,10 +334,68 @@ function MenusPage() {
   );
 }
 
+function GalleryPage() {
+  const galleryItems = [
+    {
+      image: "catering.jpg",
+      alt: "A catered spread prepared for a workplace gathering",
+      caption: "Office catering",
+    },
+    {
+      image: "community.jpg",
+      alt: "Community volunteers working together outdoors",
+      caption: "Community events",
+    },
+    {
+      image: "coffee-space.jpg",
+      alt: "A welcoming workplace coffee area",
+      caption: "Everyday moments",
+    },
+    {
+      image: "menus.jpg",
+      alt: "Fresh sandwiches and pastries for a team event",
+      caption: "Food for every occasion",
+    },
+    {
+      image: "hero-office.jpg",
+      alt: "A bright, modern workplace kitchen",
+      caption: "The workplace",
+    },
+  ];
+
+  return (
+    <div className="site-shell">
+      <SiteHeader />
+      <main className="inner-page" id="top">
+        <div className="page-intro gallery-page-intro">
+          <p className="eyebrow">Moments worth sharing</p>
+          <h1>Office and cultural events<br /><em>we&apos;ve successfully hosted.</em></h1>
+        </div>
+        <section className="gallery-section" aria-label="Gallery of EvaFlow events">
+          <p className="gallery-intro">
+            A glimpse of the gatherings, celebrations and workplace moments
+            we&apos;ve helped bring to life.
+          </p>
+          <div className="gallery-grid">
+            {galleryItems.map((item) => (
+              <figure className="gallery-card" key={item.image}>
+                <img src={`/assets/${item.image}`} alt={item.alt} />
+                <figcaption>{item.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
+    </div>
+  );
+}
+
 export default function App() {
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
   if (path === "/about") return <AboutPage />;
   if (path === "/menus") return <MenusPage />;
+  if (path === "/gallery") return <GalleryPage />;
 
   return (
     <div className="site-shell">
@@ -363,7 +423,7 @@ export default function App() {
             </div>
           </div>
           <div className="hero-visual">
-            <img src="/assets/hero-office.jpg" alt="A bright, modern workplace kitchen" />
+            <img src="/assets/brand.jpeg" alt="A bright, modern workplace kitchen" />
             <div className="floating-card">
               <span className="float-icon"><Icon name="spark" size={20} /></span>
               <div><strong>One less thing to worry about.</strong><small>We keep your workplace stocked.</small></div>
@@ -446,7 +506,7 @@ export default function App() {
 
         <section className="experience-section">
           <div className="experience-image">
-            <img src="/assets/coffee-space.jpg" alt="A thoughtfully designed workplace coffee area" />
+            <img src="/assets/stall.jpeg" alt="A thoughtfully designed workplace coffee area" />
             <div className="image-note"><Icon name="coffee" size={21} /> Better breaks, built in.</div>
           </div>
           <div className="experience-copy">
@@ -494,7 +554,7 @@ export default function App() {
             <a className="text-link light" href="#contact">Discover our partnerships <Icon name="arrow" size={18} /></a>
           </div>
           <div className="community-image">
-            <img src="/assets/community.jpg" alt="Community volunteers working together outdoors" />
+            <img src="/assets/culture.jpeg" alt="Community volunteers working together outdoors" />
             <p>Real people. Local impact.</p>
           </div>
         </section>
