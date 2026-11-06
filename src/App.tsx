@@ -142,11 +142,9 @@ function SiteHeader() {
         <nav className={menuOpen ? "main-nav open" : "main-nav"} aria-label="Main navigation">
           <a href="/#services" onClick={closeMenu}>Services</a>
           <a href="/about" onClick={closeMenu}>About us</a>
-          <a href="/#catering" onClick={closeMenu}>Catering</a>
           <a href="/menus" onClick={closeMenu}>Menus</a>
           <a href="/gallery" onClick={closeMenu}>Gallery</a>
           <a href="/#locations" onClick={closeMenu}>Locations</a>
-          <a href="/#approach" onClick={closeMenu}>Why eväflow</a>
           <button className="nav-cta" onClick={openQuoteForm} type="button">
             Request a quote <Icon name="arrow" size={18} />
           </button>
@@ -233,10 +231,8 @@ function SiteFooter() {
         <p className="footer-label">Explore</p>
         <a href="/#services">Services</a>
         <a href="/about">About us</a>
-        <a href="/#catering">Catering</a>
         <a href="/menus">Menus</a>
         <a href="/gallery">Gallery</a>
-        <a href="/#approach">Why eväflow</a>
         <a href="/#locations">Locations</a>
       </div>
       <div>
@@ -245,8 +241,8 @@ function SiteFooter() {
       </div>
       <div>
         <p className="footer-label">Follow</p>
-        <a href="/#contact">LinkedIn</a>
-        <a href="/#contact">Instagram</a>
+        <a href="https://www.facebook.com/share/1DruHakqsN/">Facebook</a>
+        <a href="https://www.instagram.com/evaflowservices?obrf=MXd6bjZ3YnA2bmlsMg==">Instagram</a>
       </div>
       <p className="copyright">© 2025 eväflow Services. All rights reserved.</p>
     </footer>
@@ -290,7 +286,7 @@ function AboutPage() {
         <section className="inner-cta">
           <p className="eyebrow">Personal from day one</p>
           <h2>Let&apos;s build a service around <em>your team.</em></h2>
-          <a className="button button-primary" href="/#contact">Meet EvaFlow <Icon name="arrow" size={19} /></a>
+          <a className="button button-primary" href="mailto:evaflowservices@gmail.com">Meet EvaFlow <Icon name="arrow" size={19} /></a>
         </section>
       </main>
       <SiteFooter />
@@ -321,7 +317,7 @@ function MenusPage() {
               <details><summary><span>02</span> Lunch &amp; team tables</summary><p>Colourful salads, warm seasonal dishes, artisan bread and nourishing plant-forward sides.</p></details>
               <details><summary><span>03</span> Meetings &amp; celebrations</summary><p>Open sandwiches, savoury bites, cakes and elegant finger food for effortless hosting.</p></details>
             </div>
-            <a className="text-link" href="/#contact">Request the current menu <Icon name="arrow" size={18} /></a>
+            <a className="text-link" href="tel:+358413262978">Request the current menu <Icon name="arrow" size={18} /></a>
           </div>
         </section>
         <section className="menu-principles">
@@ -340,7 +336,7 @@ function GalleryPage() {
     {
       image: "five.png",
       alt: "A catered spread prepared for a workplace gathering",
-      caption: "Office catering",
+      caption: "Stall at Cultural Event",
     },
     {
       image: "culture.jpeg",
@@ -350,17 +346,17 @@ function GalleryPage() {
     {
       image: "stall.jpeg",
       alt: "A welcoming workplace coffee area",
-      caption: "Everyday moments",
+      caption: "Showcase of Our Products",
     },
     {
       image: "brand.jpeg",
       alt: "Fresh sandwiches and pastries for a team event",
-      caption: "Food for every occasion",
+      caption: "eväflow branding products",
     },
     {
       image: "three.png",
       alt: "A bright, modern workplace kitchen",
-      caption: "The workplace",
+      caption: "Bulk Supplies",
     },
     {
       image: "one.png",
@@ -381,6 +377,41 @@ function GalleryPage() {
       image: "six.png",
       alt: "A bright, modern workplace kitchen",
       caption: "The workplace",
+    },
+    {
+      image: "a.jpeg",
+      alt: "A welcoming workplace coffee area",
+      caption: "Halloween Celebration",
+    },
+    {
+      image: "b.jpeg",
+      alt: "Fresh sandwiches and pastries for a team event",
+      caption: "Plate of Happiness",
+    },
+    {
+      image: "c.jpeg",
+      alt: "A bright, modern workplace kitchen",
+      caption: "The workplace",
+    },
+    {
+      image: "d.jpeg",
+      alt: "A welcoming workplace coffee area",
+      caption: "Everyday moments",
+    },
+    {
+      image: "e.jpeg",
+      alt: "Fresh sandwiches and pastries for a team event",
+      caption: "Food for every occasion",
+    },
+    {
+      image: "f.jpeg",
+      alt: "A bright, modern workplace kitchen",
+      caption: "Founder's touch",
+    },
+    {
+      image: "g.jpeg",
+      alt: "A bright, modern workplace kitchen",
+      caption: "Halloween Drinks",
     },
   ];
 
@@ -434,7 +465,7 @@ export default function App() {
               <a className="button button-primary" href="#services">
                 Explore our services <Icon name="arrow" size={19} />
               </a>
-              <a className="text-link" href="#contact">Talk to our team</a>
+              <a className="text-link" href="mailto:evaflowservices@gmail.com">Talk to our team</a>
             </div>
             {/* <div className="hero-proof">
               <div className="avatar-stack" aria-hidden="true">
@@ -497,7 +528,7 @@ export default function App() {
               office lunches. Thoughtfully prepared for your schedule, group size
               and dietary requirements.
             </p>
-            <a className="button button-dark" href="#contact">
+            <a className="button button-dark" href="mailto:evaflowservices@gmail.com">
               Plan your catering <Icon name="arrow" size={19} />
             </a>
           </div>
@@ -521,7 +552,7 @@ export default function App() {
             <article><span>01</span><h3>Helsinki</h3><p>City centre, Pasila, Kalasatama, Ruoholahti and surrounding districts.</p></article>
             <article><span>02</span><h3>Espoo</h3><p>Keilaniemi, Otaniemi, Leppävaara and key workplace hubs.</p></article>
             <article><span>03</span><h3>Vantaa</h3><p>Aviapolis, Tikkurila and neighbouring commercial areas.</p></article>
-            <article className="location-note"><Icon name="delivery" /><p>Outside these areas? <a href="#contact">Ask our team</a> about a tailored delivery route.</p></article>
+            <article className="location-note"><Icon name="delivery" /><p>Outside these areas? <a href="mailto:evaflowservices@gmail.com">Ask our team</a> about a tailored delivery route.</p></article>
           </div>
         </section>
 
@@ -543,7 +574,7 @@ export default function App() {
               <li><span>02</span> Quality products, thoughtfully sourced</li>
               <li><span>03</span> Proactive restocking and responsive care</li>
             </ul>
-            <a className="button button-dark" href="#contact">Build your service plan <Icon name="arrow" size={19} /></a>
+            <a className="button button-dark" href="mailto:evaflowservices@gmail.com">Build your service plan <Icon name="arrow" size={19} /></a>
           </div>
         </section>
 
@@ -572,7 +603,7 @@ export default function App() {
               why we support local sports, active communities and initiatives
               that bring people together.
             </p>
-            <a className="text-link light" href="#contact">Discover our partnerships <Icon name="arrow" size={18} /></a>
+            {/*<a className="text-link light" href="#contact">Discover our partnerships <Icon name="arrow" size={18} /></a>*/}
           </div>
           <div className="community-image">
             <img src="/assets/culture.jpeg" alt="Community volunteers working together outdoors" />
@@ -598,8 +629,8 @@ export default function App() {
           </div>
           <div className="contact-content">
             <p>Tell us what your team needs. We&apos;ll come back with a clear, no-pressure proposal.</p>
-            <a className="button button-white" href="mailto:sales@evaflowservices.com">
-              sales@evaflowservices.com <Icon name="arrow" size={19} />
+            <a className="button button-white" href="mailto:evaflowservices@gmail.com">
+              evaflowservices@gmail.com <Icon name="arrow" size={19} />
             </a>
             <a className="phone-link" href="tel:+358413262978">+358 41 326 2978</a>
           </div>
